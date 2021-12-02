@@ -1,0 +1,134 @@
+/* I got nothing to explain. that's css :) */
+
+body {
+	background: linear-gradient(to right, #fc466b, #3f5efb);
+	text-align: center;
+	font-family: consolas;
+	font-size: 1.5em;
+}
+
+#board_table {
+	font-size: 50px;
+	border: 6px solid;
+	top: 10vh;
+	text-align: center;
+	border-collapse: collapse;
+}
+
+#board_table td {
+	border: 0px;
+	width: 80px;
+	height: 80px;
+	background-color: #000000;
+	padding: 0;
+}
+.container {
+	position: relative;
+}
+
+.board {
+	width: 100%;
+	height: 100%;
+	position: absolute;
+	top: 0;
+	left: 0;
+	z-index: -1;
+}
+
+.pieces {
+	position: absolute;
+	width: 100%;
+	height: 100%;
+	top: 0;
+	left: 0;
+}
+#piece_table {
+	font-size: 55px;
+	border: 6px solid #000;
+	top: 10vh;
+	border-collapse: collapse;
+	text-align: center;
+	padding: 0;
+	height: 80px;
+	color: #000;
+}
+
+#piece_table td {
+	border: 0px;
+	width: 80px;
+	height: 80px;
+	padding: 0;
+	height: 80px;
+}
+
+#piece_table td:hover {
+	box-shadow: 0px 0px 40px 0px #8d8d8d inset;
+}
+.scoreboard {
+	position: absolute;
+	left: 675px;
+}
+
+h1,
+h2,
+p {
+	color: white;
+	cursor: default;
+}
+button {
+	font-family: consolas;
+	right: 20px;
+	position: absolute;
+	border-radius: 40px;
+	-webkit-transition: all 0.15s ease-in-out;
+	transition: all 0.15s ease-in-out;
+	cursor: pointer;
+	color: white;
+	padding: 20px;
+	border: transparent;
+}
+#start_button {
+	font-size: 60px;
+	top: 20px;
+	background: linear-gradient(to bottom right, #ef4765, #ff9a5a);
+}
+
+#start_button:hover {
+	box-shadow: 0px 0px 40px 0px #ef4765;
+}
+
+#start_button:active {
+	font-size: 57px;
+}
+
+#theme_button {
+	font-size: 25px;
+	top: 150px;
+	background: linear-gradient(to bottom right, #ee153d, #ff5ae4);
+}
+
+#theme_button:hover {
+	box-shadow: 0px 0px 30px 0px #ee153d;
+}
+
+#theme_button:active {
+	font-size: 22px;
+}
+
+#info_button {
+	font-size: 25px;
+	top: 240px;
+	background: linear-gradient(to bottom right, #0f9215, #ccdace);
+}
+
+#info_button:hover {
+	box-shadow: 0px 0px 30px 0px #0f9215;
+}
+
+#info_button:active {
+	font-size: 22px;
+}
+.madeby {
+	font-weight: bold;
+	font-style: oblique;
+}

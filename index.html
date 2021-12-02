@@ -1,0 +1,205 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<title>Dama Game by Kaendass</title>
+		<link rel="stylesheet" href="style.css" />
+	</head>
+	<body id="content">
+		<div class="container">
+			<!-- div for game board -->
+			<div class="board">
+				<!-- table for creating game board -->
+				<table id="board_table" border="1">
+					<tr>
+						<td id="cell00"></td>
+						<td id="cell01"></td>
+						<td id="cell02"></td>
+						<td id="cell03"></td>
+						<td id="cell04"></td>
+						<td id="cell05"></td>
+						<td id="cell06"></td>
+						<td id="cell07"></td>
+					</tr>
+					<tr>
+						<td id="cell10"></td>
+						<td id="cell11"></td>
+						<td id="cell12"></td>
+						<td id="cell13"></td>
+						<td id="cell14"></td>
+						<td id="cell15"></td>
+						<td id="cell16"></td>
+						<td id="cell17"></td>
+					</tr>
+					<tr>
+						<td id="cell20"></td>
+						<td id="cell21"></td>
+						<td id="cell22"></td>
+						<td id="cell23"></td>
+						<td id="cell24"></td>
+						<td id="cell25"></td>
+						<td id="cell26"></td>
+						<td id="cell27"></td>
+					</tr>
+					<tr>
+						<td id="cell30"></td>
+						<td id="cell31"></td>
+						<td id="cell32"></td>
+						<td id="cell33"></td>
+						<td id="cell34"></td>
+						<td id="cell35"></td>
+						<td id="cell36"></td>
+						<td id="cell37"></td>
+					</tr>
+					<tr>
+						<td id="cell40"></td>
+						<td id="cell41"></td>
+						<td id="cell42"></td>
+						<td id="cell43"></td>
+						<td id="cell44"></td>
+						<td id="cell45"></td>
+						<td id="cell46"></td>
+						<td id="cell47"></td>
+					</tr>
+					<tr>
+						<td id="cell50"></td>
+						<td id="cell51"></td>
+						<td id="cell52"></td>
+						<td id="cell53"></td>
+						<td id="cell54"></td>
+						<td id="cell55"></td>
+						<td id="cell56"></td>
+						<td id="cell57"></td>
+					</tr>
+					<tr>
+						<td id="cell60"></td>
+						<td id="cell61"></td>
+						<td id="cell62"></td>
+						<td id="cell63"></td>
+						<td id="cell64"></td>
+						<td id="cell65"></td>
+						<td id="cell66"></td>
+						<td id="cell67"></td>
+					</tr>
+					<tr>
+						<td id="cell70"></td>
+						<td id="cell71"></td>
+						<td id="cell72"></td>
+						<td id="cell73"></td>
+						<td id="cell74"></td>
+						<td id="cell75"></td>
+						<td id="cell76"></td>
+						<td id="cell77"></td>
+					</tr>
+				</table>
+			</div>
+			<!-- div for checker pieces. this div overlaps the previous div -->
+			<div class="pieces">
+				<!-- table for placing and controlling pieces -->
+				<table id="piece_table" border="1">
+					<tr>
+						<td id="cell00_" onclick="select(0,0)"></td>
+						<td id="cell01_" onclick="select(0,1)"></td>
+						<td id="cell02_" onclick="select(0,2)"></td>
+						<td id="cell03_" onclick="select(0,3)"></td>
+						<td id="cell04_" onclick="select(0,4)"></td>
+						<td id="cell05_" onclick="select(0,5)"></td>
+						<td id="cell06_" onclick="select(0,6)"></td>
+						<td id="cell07_" onclick="select(0,7)"></td>
+					</tr>
+					<tr>
+						<td id="cell10_" onclick="select(1,0)"></td>
+						<td id="cell11_" onclick="select(1,1)"></td>
+						<td id="cell12_" onclick="select(1,2)"></td>
+						<td id="cell13_" onclick="select(1,3)"></td>
+						<td id="cell14_" onclick="select(1,4)"></td>
+						<td id="cell15_" onclick="select(1,5)"></td>
+						<td id="cell16_" onclick="select(1,6)"></td>
+						<td id="cell17_" onclick="select(1,7)"></td>
+					</tr>
+					<tr>
+						<td id="cell20_" onclick="select(2,0)"></td>
+						<td id="cell21_" onclick="select(2,1)"></td>
+						<td id="cell22_" onclick="select(2,2)"></td>
+						<td id="cell23_" onclick="select(2,3)"></td>
+						<td id="cell24_" onclick="select(2,4)"></td>
+						<td id="cell25_" onclick="select(2,5)"></td>
+						<td id="cell26_" onclick="select(2,6)"></td>
+						<td id="cell27_" onclick="select(2,7)"></td>
+					</tr>
+					<tr>
+						<td id="cell30_" onclick="select(3,0)"></td>
+						<td id="cell31_" onclick="select(3,1)"></td>
+						<td id="cell32_" onclick="select(3,2)"></td>
+						<td id="cell33_" onclick="select(3,3)"></td>
+						<td id="cell34_" onclick="select(3,4)"></td>
+						<td id="cell35_" onclick="select(3,5)"></td>
+						<td id="cell36_" onclick="select(3,6)"></td>
+						<td id="cell37_" onclick="select(3,7)"></td>
+					</tr>
+					<tr>
+						<td id="cell40_" onclick="select(4,0)"></td>
+						<td id="cell41_" onclick="select(4,1)"></td>
+						<td id="cell42_" onclick="select(4,2)"></td>
+						<td id="cell43_" onclick="select(4,3)"></td>
+						<td id="cell44_" onclick="select(4,4)"></td>
+						<td id="cell45_" onclick="select(4,5)"></td>
+						<td id="cell46_" onclick="select(4,6)"></td>
+						<td id="cell47_" onclick="select(4,7)"></td>
+					</tr>
+					<tr>
+						<td id="cell50_" onclick="select(5,0)"></td>
+						<td id="cell51_" onclick="select(5,1)"></td>
+						<td id="cell52_" onclick="select(5,2)"></td>
+						<td id="cell53_" onclick="select(5,3)"></td>
+						<td id="cell54_" onclick="select(5,4)"></td>
+						<td id="cell55_" onclick="select(5,5)"></td>
+						<td id="cell56_" onclick="select(5,6)"></td>
+						<td id="cell57_" onclick="select(5,7)"></td>
+					</tr>
+					<tr>
+						<td id="cell60_" onclick="select(6,0)"></td>
+						<td id="cell61_" onclick="select(6,1)"></td>
+						<td id="cell62_" onclick="select(6,2)"></td>
+						<td id="cell63_" onclick="select(6,3)"></td>
+						<td id="cell64_" onclick="select(6,4)"></td>
+						<td id="cell65_" onclick="select(6,5)"></td>
+						<td id="cell66_" onclick="select(6,6)"></td>
+						<td id="cell67_" onclick="select(6,7)"></td>
+					</tr>
+					<tr>
+						<td id="cell70_" onclick="select(7,0)"></td>
+						<td id="cell71_" onclick="select(7,1)"></td>
+						<td id="cell72_" onclick="select(7,2)"></td>
+						<td id="cell73_" onclick="select(7,3)"></td>
+						<td id="cell74_" onclick="select(7,4)"></td>
+						<td id="cell75_" onclick="select(7,5)"></td>
+						<td id="cell76_" onclick="select(7,6)"></td>
+						<td id="cell77_" onclick="select(7,7)"></td>
+					</tr>
+				</table>
+			</div>
+			<button id="start_button" onclick="start_game()">Start</button>
+			<button id="theme_button" onclick="change_theme()">Change Theme</button>
+			<a
+				href="https://en.wikipedia.org/wiki/Russian_draughts#:~:text=As%20in%20all%20draughts%20variants,captured%20by%20jumping%20over%20them."
+				target="_blank"
+			>
+				<button id="info_button">How to play?</button>
+			</a>
+
+			<div class="scoreboard">
+				<p class="madeby">CHECKER GAME v1.0 - Made by Kaendass</p>
+				<h1 id="turn_text">Who will start?</h1>
+				<h2 id="blue_points"></h2>
+				<h2 id="red_points"></h2>
+				<p>🟥 is the King for Red</p>
+				<p>🟦 is the King for Blue</p>
+			</div>
+		</div>
+
+		<script src="script.js"></script>
+	</body>
+</html>
